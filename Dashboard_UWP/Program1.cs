@@ -365,7 +365,6 @@ namespace Dashboard_Winform
                 "INSERT INTO INVERTER_DATA (_datetime, Serial, MPPTs, DC_c1, DC_v1, DC_p1, DC_c2, DC_v2, DC_p2, total_yield, current_yield, daily_yield, condition) " +
                 "VALUES ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12});"
                 , ("'" + date + "'"), serial, mppts, DC_c1, DC_v1, DC_p1, DC_c2, DC_v2, DC_p2, total_yield, current_yield, daily_yield, condition);
-            Debug.WriteLine(sendQuery);
             // Connecting to sql and execute query formed above
             using (SqlConnection sqlconn = new SqlConnection(sql.ConnectionString))
             {
